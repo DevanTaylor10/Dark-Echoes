@@ -1,0 +1,98 @@
+ :root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --muted: #444;
+  --text: #000000;
+  --active: #f3d9e2;   /* active highlight */
+  --border: #ddd;
+  --hover: #fce4ec;    /* light pink hover */
+  --btn: #f06292;      /* button color */
+  --btnText: #ffffff;
+  --btnHover: #ec407a;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+html, body, #root { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+
+.shell { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+.top h1 { margin: 0 0 18px; font-weight: 700; letter-spacing: .2px; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.sidebar {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.sidebar-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+.sidebar-sub {
+  margin: 2px 0 12px;
+  color: var(--muted);
+}
+
+.episode-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.episode-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+
+.episode-item:hover { background: var(--hover); }
+.episode-item.active {
+  background: var(--active);
+  font-weight: bold;
+}
+
+.ep-name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  min-height: 220px;
+}
+
+.episode-details.empty { color: var(--muted); font-style: italic; }
+
+.ep-number { margin: 0 0 6px; color: var(--muted); font-weight: 700; }
+.ep-title { margin: 0 0 10px; }
+.ep-desc  { margin: 0 0 16px; color: #333; }
+
+.watch-btn {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: var(--btn);
+  color: var(--btnText);
+  font-weight: 700;
+  cursor: pointer;
+}
+.watch-btn:hover { background: var(--btnHover); }
