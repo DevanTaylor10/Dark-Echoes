@@ -1,4 +1,3 @@
-// src/data.js
 const episodes = [
   {
     id: 1,

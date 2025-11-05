@@ -1,0 +1,94 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body, #root { margin: 0; height: 100vh; }
+
+.app {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100%;
+  color: #eaeaea;
+  background: #0c0f13;
+}
+
+.sidebar {
+  background: #12161c;
+  border-right: 1px solid #222831;
+  padding: 20px 16px;
+  overflow: auto;
+}
+
+.brand {
+  margin: 0 0 16px 0;
+  font-size: 22px;
+}
+
+.episode-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.episode-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  margin: 4px 0;
+  background: transparent;
+  border: 1px solid #222831;
+  border-radius: 6px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.episode-item:hover {
+  border-color: #3a4754;
+  background: #171c23;
+}
+
+.episode-item.active {
+  background: #323a45;
+  border-color: #475362;
+}
+
+.content {
+  padding: 28px;
+  overflow: auto;
+}
+
+.details .ep-title {
+  margin: 0;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.details .ep-name {
+  margin: 6px 0 10px 0;
+  font-size: 28px;
+}
+
+.ep-desc {
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-bottom: 18px;
+  opacity: 0.95;
+}
+
+.watch-btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #d6d6d6;
+  background: #e9ecef;
+  color: #111;
+  cursor: pointer;
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  opacity: 0.8;
+}
